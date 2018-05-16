@@ -10,6 +10,22 @@ $ npm install --save-dev enzyme jest-cli@20.0.4
 **NOTE**: `jest-cli@20.0.4` is used because the newer version has a conflict with current version Enzyme (true as of March 2018)
 
 ## Enzyme
+``` javascript
+import { shallow } from 'enzyme'
+```
+
+### Simulate Change
+
+> Tests input change
+
+1. Find DOM element
+2. Simulate value change
+3. Specify value
+
+``` javascript
+gift.find('.input-person').simulate('change', { target: { value: 'Bob' } })
+```
+
 
 ### React 16 Adapter
 
@@ -38,6 +54,7 @@ export default requestAnimationFrame
 - Previous tests should not affect later tests
 - Ensure zero test pollution -> isolated units
 - Use describe to encapsulate
+- Use beforeEach() and afterEach() to de-pollute
 
 ## Behaviour-Driven Development
 
