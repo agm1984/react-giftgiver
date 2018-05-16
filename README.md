@@ -9,9 +9,31 @@ $ npm install --save-dev enzyme jest-cli@20.0.4
 ```
 **NOTE**: `jest-cli@20.0.4` is used because the newer version has a conflict with current version Enzyme (true as of March 2018)
 
-## Enzyme
+## Enzyme Usage
+
 ``` javascript
 import { shallow } from 'enzyme'
+
+const app = shallow(<App />)
+```
+
+### Get State
+
+> Gets the component's state
+
+``` javascript
+gift.find('.input-person').simulate('change', { target: { value: 'Bob' } })
+```
+
+### Simulate Click
+
+> Tests button click
+
+1. Find DOM element
+2. Simulate click
+
+``` javascript
+app.find('.btn-add').simulate('click')
 ```
 
 ### Simulate Change
