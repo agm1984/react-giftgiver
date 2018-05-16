@@ -27,7 +27,7 @@ configure({
 
 ./src/tempPolyfills.js
 ``` javascript
-const requestAnimationFrame = global.requestAnimationFrame =   callback => setTimeout(callback, 0)
+const requestAnimationFrame = global.requestAnimationFrame = callback => setTimeout(callback, 0)
 
 export default requestAnimationFrame
 ```
