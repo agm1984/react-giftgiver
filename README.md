@@ -48,6 +48,18 @@ app.find('.btn-add').simulate('click')
 gift.find('.input-person').simulate('change', { target: { value: 'Bob' } })
 ```
 
+### Get Instance
+
+> Refers to component instance
+
+1. Find DOM element
+2. Return instance
+
+``` javascript
+beforeEach(() => {
+  app.instance().removeGift(id)
+})
+```
 
 ### React 16 Adapter
 
